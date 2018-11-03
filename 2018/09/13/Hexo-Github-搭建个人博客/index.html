@@ -17,14 +17,14 @@ hexo官网安装Hexo12345npm install hexo-cli -g  #安装hexo模块hexo init blo
 <blockquote>
 <p>三、使用github pages</p>
 </blockquote>
-<p><br><br>github pages是给开发者建立一个私人页面，免费且没有空间流量限制。每个github账号都可以创建一个github pages项目<br><br><br><strong>创建github pages项目</strong><br><br><br>在github上新建一个项目，项目的名称必须是（<strong>你的用户名.github.io</strong>)才行<br><br><br><img src="http://pf6kw8sa0.bkt.clouddn.com/1.png" alt="创建github pages"><br><br><br>点击创建<br><br></p>
+<p><br><br>github pages是给开发者建立一个私人页面，免费且没有空间流量限制。每个github账号都可以创建一个github pages项目<br><br><br><strong>创建github pages项目</strong><br><br><br>在github上新建一个项目，项目的名称必须是（<strong>你的用户名.github.io</strong>)才行<br><br><br><img src="http://image.sharevar.com/1.png" alt="创建github pages"><br><br><br>点击创建<br><br></p>
 <blockquote>
 <p>四、配置git信息(方便hexo和github通过ssh通信)</p>
 </blockquote>
 <p><br><br>1、设置Git的user name和email：(如果是第一次的话)<br><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;寻未四叔&quot;</span><br><span class="line">git config --global user.email &quot;598471284@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
 <p><br><br>查看是否配置成功<br><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name</span><br><span class="line">git config --global user.email</span><br></pre></td></tr></table></figure></p>
-<p><br><br><img src="http://pf6kw8sa0.bkt.clouddn.com/2.png" alt="查询配置"><br><br><br>2、生成密钥<br><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;598471284@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
-<p><br><br><img src="http://pf6kw8sa0.bkt.clouddn.com/3.png" alt="生成密钥"><br><br><br><br>在/Users/raodaqi/.ssh/目录下会生成两个文件id_rsa和id_rsa.pub<br><br><br>将id_rsa.pub里的内容配置到github项目的Deploy keys里<br><br><br><img src="http://pf6kw8sa0.bkt.clouddn.com/4.png" alt="Deploy keys"><br><br></p>
+<p><br><br><img src="http://image.sharevar.com/2.png" alt="查询配置"><br><br><br>2、生成密钥<br><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;598471284@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p><br><br><img src="http://image.sharevar.com/3.png" alt="生成密钥"><br><br><br><br>在/Users/raodaqi/.ssh/目录下会生成两个文件id_rsa和id_rsa.pub<br><br><br>将id_rsa.pub里的内容配置到github项目的Deploy keys里<br><br><br><img src="http://image.sharevar.com/4.png" alt="Deploy keys"><br><br></p>
 <blockquote>
 <p>五、配置Deployment<br><br><br>在blog项目根目录下里找到_config.yml文件，找到Deployment，然后按照如下修改：<br><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
 </blockquote>
